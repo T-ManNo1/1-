@@ -1,0 +1,33 @@
+# https://leetcode.com/problems/merge-strings-alternately/?envType=study-plan-v2&envId=leetcode-75 (Merge Strings Alternately)
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        output = []
+        i = 0
+        while i < len(word1) or i < len(word2):
+            if i < len(word1):
+                output.append(word1[i])
+            if i < len(word2):
+                output.append(word2[i])
+            i += 1
+        return ''.join(output)
+#-------------------------------------------------------------------------
+# https://leetcode.com/problems/two-sum/ (Two Sum)
+class Solution(object):
+    def twoSum(self, nums, target):
+        for i in range (len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return[i, j]
+#-------------------------------------------------------------------------
+# https://leetcode.com/problems/move-zeroes/description/?envType=study-plan-v2&envId=leetcode-75 (Move Zeroes)
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        for y in nums:
+            for i in range(len(nums)-1):
+                if nums[i]==0 and nums[i+1]!=0:
+                    nums[i],nums[i+1]=nums[i+1],nums[i]
+#--------------------------------------------------------------------------
+
+
+
+
