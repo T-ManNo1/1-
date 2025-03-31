@@ -27,7 +27,13 @@ class Solution:
                 if nums[i]==0 and nums[i+1]!=0:
                     nums[i],nums[i+1]=nums[i+1],nums[i]
 #--------------------------------------------------------------------------
-
-
-
-
+# https://leetcode.com/problems/recyclable-and-low-fat-products/?envType=study-plan-v2&envId=top-sql-50 (Recyclable and Low Fat Products)
+SELECT product_id
+    FROM Products
+    WHERE low_fats = 'Y' and recyclable = 'Y';
+#--------------------------------------------------------------------------
+# https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/submissions/?envType=study-plan-v2&envId=leetcode-75 (Kids With the Greatest Number of Candies)
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        maximum = max(candies)  
+        return [candy + extraCandies >= maximum for candy in candies]
